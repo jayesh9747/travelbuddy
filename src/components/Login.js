@@ -36,7 +36,8 @@ const Login = () => {
 
   return (
     <>
-      <div className="p-4 box">
+     <div className="body">
+     <div className="p-4 box">
         <h2 className="mb-3">Firebase Auth Login</h2>
         {error && <Alert variant="danger">{error}</Alert>}
         <Form onSubmit={handleSubmit}>
@@ -70,10 +71,12 @@ const Login = () => {
             onClick={handleGoogleSignIn}
           />
         </div>
-      </div>
-      <div className="p-4 box mt-3 text-center">
+        <div className="p-4 box mt-3 text-center" style={{"width":"inherit"}}>
         Don't have an account? <Link to="/signup">Sign up</Link>
       </div>
+      </div>
+      
+     </div>
     </>
   );
 };

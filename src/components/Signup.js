@@ -17,7 +17,7 @@ const Signup = () => {
     setError("");
     try {
       await signUp(email, password);
-      navigate("/");
+      navigate("/login");
     } catch (err) {
       setError(err.message);
     }
@@ -25,6 +25,7 @@ const Signup = () => {
 
   return (
     <>
+    <div className="body">
       <div className="p-4 box">
         <h2 className="mb-3">Firebase Auth Signup</h2>
         {error && <Alert variant="danger">{error}</Alert>}
@@ -51,9 +52,11 @@ const Signup = () => {
             </Button>
           </div>
         </Form>
+        <div className="p-4 box mt-3 text-center">
+          Already have an account? <Link to="/login">Log In</Link>
+        </div>
       </div>
-      <div className="p-4 box mt-3 text-center">
-        Already have an account? <Link to="/">Log In</Link>
+      
       </div>
     </>
   );
