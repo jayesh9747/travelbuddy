@@ -28,7 +28,7 @@ function Footer() {
         </div>
       </div>
       <br></br>
-      <p>© 2023, Built by chaman and Travel Buddy team </p>
+      <p>© 2023, Built by jayesh,chaman and Travel Buddy team </p>
     </footer>
   );
 }
